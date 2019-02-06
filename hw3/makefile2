@@ -1,0 +1,14 @@
+CC =gcc
+CFLAGS = -Wall -pedantic-errors -ansi
+LIBS = -lm
+
+all : main
+
+main : compile
+	gcc homework3_part2.o  $(LIBS) -o prog2
+
+compile : 
+	gcc -c homework3_part2.c $(CFLAGS) 
+
+clear :
+	rm homework3_part2.o prog2 
